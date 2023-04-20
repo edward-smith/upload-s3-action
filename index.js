@@ -7,22 +7,22 @@ const slash = require('slash').default;
 const klawSync = require('klaw-sync');
 const { lookup } = require('mime-types');
 
-const AWS_KEY_ID = core.getInput('aws_key_id', {
+const AWS_KEY_ID = core.getInput('AWS_KEY_ID', {
   required: true,
 });
-const SECRET_ACCESS_KEY = core.getInput('aws_secret_access_key', {
+const SECRET_ACCESS_KEY = core.getInput('AWS_SECRET_ACCESS_KEY', {
   required: true,
 });
-const BUCKET = core.getInput('aws_bucket', {
+const BUCKET = core.getInput('AWS_BUCKET', {
   required: true,
 });
-const SOURCE_DIR = core.getInput('source_dir', {
+const SOURCE_DIR = core.getInput('SOURCE_DIR', {
   required: true,
 });
-const DESTINATION_DIR = core.getInput('destination_dir', {
+const DESTINATION_DIR = core.getInput('DESTINATION_DIR', {
   required: false,
 });
-const ENDPOINT = core.getInput('endpoint', {
+const ENDPOINT = core.getInput('ENDPOINT', {
   required: false,
 });
 
